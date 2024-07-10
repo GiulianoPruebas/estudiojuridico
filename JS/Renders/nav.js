@@ -4,7 +4,7 @@ function GenerarNav() {
     barraNav.innerHTML = `
         <li class="left-links">
             <a href="/index.html" class="texto">
-                <img src="/gycestudio2.png" alt="estudiogyc" class="logo">
+                <img src="gycestudio2.png" alt="estudiogyc" class="logo">
             </a>
         </li>
         <ul class="menu">
