@@ -101,7 +101,32 @@ header {
   color: #0342b3;
   font-size: 16px;
 }
+@media (max-width:480px) {
+  .navegacion{
+    height: 60px;
+  }
+  .navegacion ul {
+    display: none;    
+  }
 
+  .menu-toggle {
+    display: block;
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  .menu-toggle label {
+    cursor: pointer;
+  }
+
+  .menu-toggle input[type="checkbox"] {
+    display: none;
+  }
+
+  .menu-toggle input[type="checkbox"]:checked~.menu-dropdown {
+    display: block;
+  }
+}
 @media (max-width:375px) {
   .navegacion{
     height: 60px;
