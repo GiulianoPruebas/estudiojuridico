@@ -169,52 +169,18 @@ body {
     .contenedor {
         flex-direction: column;
     }
-    
-    .info {
-        margin: 0 20px;
-    }
-    
-    .info h1 {
-        font-size: 4em;
-    }
-    
-    .info p {
-        font-size: 1.5em;
-    }
-    
-    .quienes-somos img {
-        margin-left: 0;
-    }
-    
-    .info-section {
-        width: 100%;
-    }
-    
-    .info-section img {
-        width: 60px;
-        height: 60px;
-        top: -30px;
-        left: calc(50% - 30px);
-    }
-    
-    .info-texto h1 {
-        font-size: 4em;
-    }
-    
-    .info-texto p {
-        font-size: 1.2em;
-    }
 }
 
 @media (max-width: 480px) {
 
     .info{
-        margin-bottom: 15px;
-        margin-left: -50px;
+        margin-bottom: 15px;        
+        margin-left: -10px;
     }
     .info h1 {
         font-size: 2em;
         margin: 10px 0;
+        
     }
 
     .info p {
