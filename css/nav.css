@@ -16,7 +16,7 @@
 
 header {
   width: 100%;
-  background: var(--beiblack)
+  background: var(--beiblack);
 }
 
 .texto {
@@ -113,7 +113,6 @@ header {
     display: block;
     text-align: right;
     margin-right: 10px;
-    background-color: var(--beiblack);
   }
 
   .menu-toggle label {
@@ -126,6 +125,7 @@ header {
 
   .menu-toggle input[type="checkbox"]:checked~.menu-dropdown {
     display: block;
+    background-color: var(--beiblack);
   }
 }
 @media (max-width:375px) {
