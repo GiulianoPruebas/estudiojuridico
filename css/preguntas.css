@@ -1,0 +1,156 @@
+
+.chatbot-container {
+    position: relative;
+}
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0342b3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+.chatbot-button img {
+    margin-left: 13px;
+    width: 60px;
+    height: 60px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    right: 20px; 
+    bottom: 20px;
+    z-index: 1;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: right 0.3s ease; 
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+#chatbot-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.message {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.bot-message {
+    background-color: #f1f1f1;
+}
+.user-message {
+    background-color: #d1e7dd;
+    text-align: right;
+}
+.message:hover,
+.bot-message:hover{
+    background-color: #0342b3;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+.option {
+    color: #0342b3;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.form-a{
+    color: #0342b3;
+}
+.form-a:hover,
+.option:hover{
+    color: #f1f1f1;
+}
+
+.info-imagen1 {
+    width: 30%;
+}
+
+.info-imagen1 img {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 375px) {
+    .chatbot-button {
+        width: 50px; 
+        height: 50px;
+    }
+
+    .chatbot-button img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .modal {
+        width: 90%; 
+        max-width: 280px; 
+        padding: 15px; 
+    }
+
+    .info-imagen1 {
+        width: 40%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .chatbot-button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .chatbot-button img {
+        width: 35px; 
+        height: 35px;
+    }
+
+    .modal {
+        width: 80%; 
+        max-width: 320px; 
+        padding: 18px; 
+    }
+
+    .info-imagen1 {
+        width: 35%; 
+    }
+}
+@media (max-width: 768px) {
+    .chatbot-button {
+        width: 60px; 
+        height: 60px;
+    }
+
+    .chatbot-button img {
+        width: 40px; 
+        height: 40px;
+    }
+
+    .modal {
+        width: 70%; 
+        max-width: 400px; 
+        padding: 20px; 
+    }
+
+    .info-imagen1 {
+        width: 30%; 
+    }
+}
