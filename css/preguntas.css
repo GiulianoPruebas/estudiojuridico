@@ -63,11 +63,9 @@
     background-color: #d1e7dd;
     text-align: right;
 }
-.message:hover,
-.bot-message:hover{
-    background-color: #0342b3;
-    color: #f1f1f1;
+.message:hover{
     cursor: pointer;
+    border: 3px solid #0342b3;
 }
 .option {
     color: #0342b3;
@@ -76,10 +74,6 @@
 }
 .form-a{
     color: #0342b3;
-}
-.form-a:hover,
-.option:hover{
-    color: #f1f1f1;
 }
 
 .info-imagen1 {
