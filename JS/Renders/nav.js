@@ -9,17 +9,23 @@ function GenerarNav() {
         </li>
         <ul class="menu">
             <li class="left-links menu-opciones"> 
-                <a href="#">Sobre Nosotros</a> </li>
+                <a href="Nosotros.html">Sobre Nosotros</a> </li>
             </li>
             <li class="left-links menu-opciones">                
-                <a href="#">Retiros</a>                
+                <a href="Retiros.html">Lesiones y Retiros</a>                
             </li>
             <li class="left-links menu-opciones">                
-                <a href="#">Defensas Disciplinarias</a>                
+                <a href="Reclamos.html">Reclamos Administrativo</a>                
             </li>
             <li class="left-links menu-opciones">                
-                <a href="#">Derechos Laborales</a>                
-            </li>                                       
+                <a href="Accidentes.html">Accidentes</a>                
+            </li>
+            <li class="left-links menu-opciones">                
+                <a href="Sumarios.html">Sanciones o Sumarios</a>                
+            </li>
+            <li class="left-links menu-opciones">                
+                <a href="Junta.html">Junta Medica/Calificaciones</a>                
+            </li>                                           
         </ul>
          <div class="menu-toggle">
         <input type="checkbox" id="toggle">

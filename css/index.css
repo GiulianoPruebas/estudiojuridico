@@ -9,27 +9,33 @@ body {
     padding: 0;
     background-color: var(--bei);
 }
+
 .contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
+
 .info {
-    text-align: left; 
-    margin: 0 100px; 
+    text-align: left;
+    margin: 0 100px;
 }
+
 .info h1 {
-    margin: 10px 0; 
-    font-size: 6em; 
+    margin: 10px 0;
+    font-size: 6em;
 }
+
 .info p {
-    margin-top: 10px; 
-    font-size: 2em; 
+    margin-top: 10px;
+    font-size: 2em;
 }
+
 .mas-info {
-    margin-top: 30px; 
+    margin-top: 30px;
 }
+
 .mas-info a {
     border: 1px solid var(--bluer);
     font-size: 2em;
@@ -37,72 +43,85 @@ body {
     text-decoration: none;
     color: #000;
 }
+
 .mas-info a:hover {
     background-color: var(--bluer);
     color: var(--bei);
 }
+
 .quienes-somos {
     max-width: 1500px;
-    margin: 0 auto; 
+    margin: 0 auto;
     text-align: center;
 }
+
 .quienes-somos img {
-    max-width: 100%; 
+    max-width: 100%;
     margin-left: 60px;
     height: auto;
 }
-.quienes-somos .img-container{
+
+.quienes-somos .img-container {
     margin-bottom: -50px;
 }
+
 .quienes-somos h1 {
-    font-size: 4em; 
+    font-size: 4em;
 }
+
 .quienes-somos p {
-    margin: 20px 0; 
-    font-size: 1.5em; 
+    margin: 20px 0;
+    font-size: 1.5em;
 }
-.quienes-somos span{
+
+.quienes-somos span {
     color: var(--bluer);
 }
+
 .leer-mas {
     display: inline-block;
-    padding: 10px 20px; 
-    text-decoration: none; 
+    padding: 10px 20px;
+    text-decoration: none;
     color: white;
-    background-color: #0342b3; 
-    border: 1px solid #0342b3; 
-    border-radius: 15px; 
-    text-align: center; 
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+    background-color: #0342b3;
+    border: 1px solid #0342b3;
+    border-radius: 15px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .leer-mas:hover {
-    background-color: #2173ca; 
-    border-color: #2173ca; 
+    background-color: #2173ca;
+    border-color: #2173ca;
     color: white;
 }
+
 .info-hacemos {
     text-align: center;
     font-size: 2em;
     padding: 50px;
 }
-.info-hacemos span{
+
+.info-hacemos span {
     color: var(--bluer);
 }
+
 .info-adicional {
     display: flex;
     justify-content: space-around;
     margin: 20px;
     padding: 30px;
 }
+
 .info-section {
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
+    width: 15%;
     position: relative;
     text-align: center;
     background-color: #f0f0f0fb;
 }
+
 .info-section img {
     width: 80px;
     height: 80px;
@@ -112,75 +131,92 @@ body {
     top: -40px;
     left: calc(50% - 40px);
 }
+
 .info-section h2 {
     margin-top: 30px;
 }
+
 .info-section table {
     width: 100%;
     margin-top: 20px;
 }
+
 .info-section td {
     padding: 10px;
     position: relative;
-    padding-left: 20px;    
+    padding-left: 20px;
     line-height: 1.4;
 }
+
 .info-section td::before {
     content: '•';
     color: black;
     position: absolute;
     margin-left: -15px;
 }
+
 .info-imagen {
     text-align: center;
     margin-top: 20px;
 }
+
 .info-imagen p {
     font-size: 5em;
 }
+
 .info-imagen img {
     width: 1500px;
     height: auto;
 }
+
 .info-container-bot {
-    overflow: hidden; 
+    overflow: hidden;
     margin-top: 100px;
 }
+
 .info-chatbot {
     display: flex;
     align-items: center;
     padding: 20px;
 }
+
 .info-imagen1 {
     margin-right: 30px;
 }
+
 .info-imagen1 img {
     width: 800px;
     height: auto;
 }
+
 .info-texto {
-    flex: 1; 
+    flex: 1;
 }
+
 .info-texto p {
     margin: 10px 0;
     font-size: 1.5em;
     color: #424242;
     text-align: justify;
 }
+
 .info-texto h1 {
     font-size: 5em;
 }
+
 .info-texto h4 {
     font-size: 2em;
 }
+
 .info-texto img {
     width: 300px;
     margin: 0 auto;
     height: auto;
     display: block;
-    margin-top: 10px; 
-    border-radius: 10px; 
+    margin-top: 10px;
+    border-radius: 10px;
 }
+
 @media (max-width: 768px) {
     .contenedor {
         flex-direction: column;
@@ -189,14 +225,15 @@ body {
 
 @media (max-width: 480px) {
 
-    .info{
-        margin-bottom: 15px;        
+    .info {
+        margin-bottom: 15px;
         margin-left: -10px;
     }
+
     .info h1 {
         font-size: 2em;
         margin: 10px 0;
-        
+
     }
 
     .info p {
@@ -204,78 +241,88 @@ body {
     }
 
     .mas-info a {
-        font-size: 1.2em; 
+        font-size: 1.2em;
         padding: 5px 10px;
     }
-    .quienes-somos img{
+
+    .quienes-somos img {
         margin-left: 40px;
     }
+
     .quienes-somos h1 {
         font-size: 2em;
     }
 
     .quienes-somos p {
-        font-size: 1em; 
+        font-size: 1em;
     }
 
     .quienes-somos span {
-        font-size: 1em; 
+        font-size: 1em;
     }
+
     .info-hacemos {
         font-size: 1em;
     }
+
     .info-adicional {
-        flex-direction: column; 
-        align-items: center; 
-        margin: 10px; 
-        padding: 20px; 
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        padding: 20px;
     }
-    
+
     .info-section {
-        width: 100%; 
+        width: 100%;
         margin-bottom: 40px;
     }
+
     .info-imagen p {
         font-size: 1.5em;
     }
+
     .info-imagen img {
         width: 375px;
         height: auto;
     }
+
     .info-imagen1 img {
         width: 300px;
         height: auto;
         margin-left: 30px;
     }
+
     .info-chatbot {
-        flex-direction: column; 
+        flex-direction: column;
     }
-    
+
     .info-imagen1 {
-        order: 2; 
-        text-align: center; 
-        margin-top: 20px; 
+        order: 2;
+        text-align: center;
+        margin-top: 20px;
     }
-    
+
     .info-texto {
-        order: 1; 
-        text-align: center; 
-        margin-bottom: 20px; 
+        order: 1;
+        text-align: center;
+        margin-bottom: 20px;
     }
-    
+
     .info-texto h1,
     .info-texto h4,
     .info-texto p {
         margin: 10px 0;
-        text-align: center; 
+        text-align: center;
     }
 }
+
 @media (max-width: 375px) {
 
-    .info{
+    .info {
         margin-bottom: 15px;
         margin-left: -50px;
     }
+
     .info h1 {
         font-size: 2em;
         margin: 10px 0;
@@ -286,69 +333,77 @@ body {
     }
 
     .mas-info a {
-        font-size: 1.2em; 
+        font-size: 1.2em;
         padding: 5px 10px;
     }
-    .quienes-somos img{
+
+    .quienes-somos img {
         margin-left: 40px;
     }
+
     .quienes-somos h1 {
         font-size: 2em;
     }
 
     .quienes-somos p {
-        font-size: 1em; 
+        font-size: 1em;
     }
 
     .quienes-somos span {
-        font-size: 1em; 
+        font-size: 1em;
     }
+
     .info-hacemos {
         font-size: 1em;
     }
+
     .info-adicional {
-        flex-direction: column; 
-        align-items: center; 
-        margin: 10px; 
-        padding: 20px; 
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        padding: 20px;
     }
-    
+
     .info-section {
-        width: 100%; 
+        width: 100%;
         margin-bottom: 40px;
     }
+
     .info-imagen p {
         font-size: 1.5em;
     }
+
     .info-imagen img {
         width: 375px;
         height: auto;
     }
+
     .info-imagen1 img {
         width: 300px;
         height: auto;
         margin-left: 30px;
     }
+
     .info-chatbot {
-        flex-direction: column; 
+        flex-direction: column;
     }
-    
+
     .info-imagen1 {
-        order: 2; 
-        text-align: center; 
-        margin-top: 20px; 
+        order: 2;
+        text-align: center;
+        margin-top: 20px;
     }
-    
+
     .info-texto {
-        order: 1; 
-        text-align: center; 
-        margin-bottom: 20px; 
+        order: 1;
+        text-align: center;
+        margin-bottom: 20px;
     }
-    
+
     .info-texto h1,
     .info-texto h4,
     .info-texto p {
         margin: 10px 0;
-        text-align: center; 
+        text-align: center;
     }
 }
