@@ -1,0 +1,26 @@
+.quienes-somos {
+    padding: 40px 20px;
+}
+.quienes-somos .about {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.text-quienes {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;    
+    font-weight: bold;
+}
+.quienes-somos p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.quienes-somos p:first-of-type {
+    font-weight: bold;
+}
+.quienes-somos p:last-of-type {
+    margin-bottom: 0;
+}

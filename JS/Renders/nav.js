@@ -3,7 +3,7 @@ function GenerarNav() {
     barraNav.className = 'navegacion';
     barraNav.innerHTML = `
         <li class="left-links">
-            <a href="/index.html" class="texto">
+            <a href="index.html" class="texto">
                 <img src="https://live.staticflickr.com/65535/53847883972_8c153bcace.jpg" alt="estudiogyc" class="logo">
             </a>
         </li>

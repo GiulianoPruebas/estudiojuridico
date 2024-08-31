@@ -276,7 +276,89 @@ const preguntas = [
         ]
     }
 ];
+let historialPreguntas = [];  
+
+function mostrarSubpreguntas(pregunta, index) {
+    historialPreguntas.push({ pregunta, index });  
+    renderizarSubpreguntas(pregunta, index);
+}
+
+function mostrarRespuestas(subpregunta, index, subindex) {
+    historialPreguntas.push({ pregunta: subpregunta, index, subindex });  
+    renderizarRespuestas(subpregunta, index, subindex);
+}
+
+function renderizarSubpreguntas(pregunta, index) {
+    const chatbotContainer = document.getElementById('chatbot-container');
+    chatbotContainer.innerHTML = ''; 
+    const userMessageDiv = document.createElement('div');
+    userMessageDiv.classList.add('message', 'user-message');
+    userMessageDiv.textContent = pregunta.pregunta;
+    chatbotContainer.appendChild(userMessageDiv);
+    pregunta.subpreguntas.forEach((subpregunta, subindex) => {
+        const subpreguntaDiv = document.createElement('div');
+        subpreguntaDiv.classList.add('message', 'bot-message', 'subpregunta');
+        subpreguntaDiv.textContent = subpregunta.pregunta; 
+        subpreguntaDiv.onclick = () => mostrarRespuestas(subpregunta, index, subindex);
+        chatbotContainer.appendChild(subpreguntaDiv);
+    });
+
+    agregarBotonVolver();
+}
+
+function renderizarRespuestas(subpregunta, index, subindex) {
+    const chatbotContainer = document.getElementById('chatbot-container');
+    chatbotContainer.innerHTML = ''; 
+    const userMessageDiv = document.createElement('div');
+    userMessageDiv.classList.add('message', 'user-message');
+    userMessageDiv.textContent = subpregunta.pregunta; 
+    chatbotContainer.appendChild(userMessageDiv);
+    if (subpregunta.subpreguntas && subpregunta.subpreguntas.length > 0) {
+        subpregunta.subpreguntas.forEach((respuesta) => {
+            const respuestaDiv = document.createElement('div');
+            respuestaDiv.classList.add('message', 'bot-message', 'respuesta');
+            respuestaDiv.textContent = respuesta.pregunta; 
+            respuestaDiv.onclick = () => mostrarRespuestas(respuesta, index, subindex);
+            chatbotContainer.appendChild(respuestaDiv);
+        });
+    } else {
+        const noRespuestaDiv = document.createElement('div');
+        noRespuestaDiv.classList.add('message', 'bot-message', 'respuesta');
+        noRespuestaDiv.innerHTML = 'Complete el siguiente formulario y nos contactaremos a la brevedad.<br><a href="formulario.html" target="_blank" class="form-a">Click aquí</a>';
+        chatbotContainer.appendChild(noRespuestaDiv);
+    }
+
+    agregarBotonVolver();
+}
+
+function agregarBotonVolver() {
+    const chatbotContainer = document.getElementById('chatbot-container');
+    if (historialPreguntas.length > 0) {
+        const backButton = document.createElement('div');
+        backButton.classList.add('message', 'bot-message', 'option');
+        backButton.textContent = "Volver atrás";
+        backButton.onclick = volverAtras;
+        chatbotContainer.appendChild(backButton);
+    }
+}
+
+function volverAtras() {
+    historialPreguntas.pop(); 
+    const ultimaPregunta = historialPreguntas[historialPreguntas.length - 1]; 
+
+    if (ultimaPregunta) {
+        if (ultimaPregunta.subindex !== undefined) {
+            renderizarRespuestas(ultimaPregunta.pregunta, ultimaPregunta.index, ultimaPregunta.subindex);
+        } else {
+            renderizarSubpreguntas(ultimaPregunta.pregunta, ultimaPregunta.index);
+        }
+    } else {
+        generarPreguntasIniciales();  
+    }
+}
+
 function generarPreguntasIniciales() {
+    historialPreguntas = []; 
     const chatbotContainer = document.getElementById('chatbot-container');
     chatbotContainer.innerHTML = ''; 
 
@@ -289,56 +371,7 @@ function generarPreguntasIniciales() {
         chatbotContainer.appendChild(preguntaDiv);
     });
 }
-function mostrarSubpreguntas(pregunta, index) {
-    const chatbotContainer = document.getElementById('chatbot-container');
-    chatbotContainer.innerHTML = ''; 
-    const userMessageDiv = document.createElement('div');
-    userMessageDiv.classList.add('message', 'user-message');
-    userMessageDiv.textContent = pregunta.pregunta;
-    chatbotContainer.appendChild(userMessageDiv);
-    pregunta.subpreguntas.forEach((subpregunta, subindex) => {
-        const subpreguntaDiv = document.createElement('div');
-        subpreguntaDiv.classList.add('message', 'bot-message', 'subpregunta');
-        subpreguntaDiv.textContent = subpregunta.pregunta; 
-        subpreguntaDiv.onclick = () => mostrarRespuestas(subpregunta, index, subindex);
 
-        chatbotContainer.appendChild(subpreguntaDiv);
-    });
-    const optionDiv = document.createElement('div');
-    optionDiv.classList.add('message', 'bot-message', 'option');
-    optionDiv.textContent = "Menú";
-    optionDiv.onclick = generarPreguntasIniciales;
-
-    chatbotContainer.appendChild(optionDiv);
-}
-function mostrarRespuestas(subpregunta, index, subindex) {
-    const chatbotContainer = document.getElementById('chatbot-container');
-    chatbotContainer.innerHTML = ''; 
-    const userMessageDiv = document.createElement('div');
-    userMessageDiv.classList.add('message', 'user-message');
-    userMessageDiv.textContent = subpregunta.pregunta; 
-    chatbotContainer.appendChild(userMessageDiv);
-    if (subpregunta.subpreguntas && subpregunta.subpreguntas.length > 0) {
-        subpregunta.subpreguntas.forEach((respuesta, subsubindex) => {
-            const respuestaDiv = document.createElement('div');
-            respuestaDiv.classList.add('message', 'bot-message', 'respuesta');
-            respuestaDiv.textContent = respuesta.pregunta; 
-            respuestaDiv.onclick = () => mostrarRespuestas(respuesta, index, subindex, subsubindex);
-            chatbotContainer.appendChild(respuestaDiv);
-        });
-    } else {
-        const noRespuestaDiv = document.createElement('div');
-        noRespuestaDiv.classList.add('message', 'bot-message', 'respuesta');
-        noRespuestaDiv.innerHTML = 'Complete el siguiente formulario y nos contactaremos a la brevedad.<br><a href="formulario.html" target="_blank" class="form-a">Click aquí</a>';
-        chatbotContainer.appendChild(noRespuestaDiv);
-    }
-    const optionDiv = document.createElement('div');
-    optionDiv.classList.add('message', 'bot-message', 'option');
-    optionDiv.textContent = "SubMenú";
-    optionDiv.onclick = () => mostrarSubpreguntas(preguntas[index], index);
-
-    chatbotContainer.appendChild(optionDiv);
-}
 generarPreguntasIniciales();
 const modal = document.getElementById("chatbotModal");
 const btn = document.getElementById("openChatbot");
@@ -373,5 +406,5 @@ window.onclick = function(event) {
     }
 }
 setTimeout(() => {
-    switchToRobotImage(); // Simula respuesta del chatbot
+    switchToRobotImage(); 
 }, 4000);
