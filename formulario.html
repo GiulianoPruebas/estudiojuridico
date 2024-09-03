@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./gycestudio2.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="css/formulario.css">
     <title>Formulario</title>
 </head>
+
 <body>
-    <h1>Proximamente...</h1>
+    <div class="form-content">
+        <h2>Complete el formulario</h2>
+        <form action="https://formsubmit.co/giulianovictorm98@gmail.com" method="POST">
+            <input type="hidden" name="detalle_caso" value="caso art, superado los 15 días">
+            <label for="Nombre">Nombre</label>
+            <input type="text" name="Nombre" id="Nombre" placeholder="Ruben" required>
+
+            <label for="Apellido">Apellido</label>
+            <input type="text" name="Apellido" id="Apellido" placeholder="Diaz" required>
+
+            <label for="Telefono">Teléfono</label>
+            <input type="text" name="Teléfono" id="Telefono" placeholder="1131132353" required>
+
+            <label for="Mail">Correo Electrónico</label>
+            <input type="email" name="Mail" id="Mail" placeholder="tucorreo@gmail.com" required>
+
+            <label for="Comentarios">Descripción del caso</label>
+            <textarea name="Comentarios" id="Comentarios" placeholder="Descripción del caso para ponernos en contacto." required></textarea>
+            <input class="btn" type="submit" value="Enviar">
+            <input type="hidden" name="_next" value="https://giulianopruebas.github.io/estudiojuridico/index.html">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </div>
 </body>
+
 </html>
