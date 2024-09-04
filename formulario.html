@@ -14,7 +14,7 @@
     <div class="form-content">
         <h2>Complete el formulario</h2>
         <form action="https://formsubmit.co/giulianovictorm98@gmail.com" method="POST">
-            <input type="hidden" name="detalle_caso" value="caso art, superado los 15 días">
+            <input type="hidden" name="CASO" id="detalle_caso">
             <label for="Nombre">Nombre</label>
             <input type="text" name="Nombre" id="Nombre" placeholder="Ruben" required>
 
@@ -34,6 +34,12 @@
             <input type="hidden" name="_captcha" value="false">
         </form>
     </div>
+    <div id="loading-screen" style="display:none;">
+        <p>Gracias por completar el formulario, en breve nos estaremos comunicando.</p>
+        <p>Redirigiendo...</p>
+        <div class="spinner"><img src="./gycestudio2.png" alt="Logo" class="spinner-image"></div> 
+    </div>
+    <script type="module" src="JS/Renders/form.js"></script>
 </body>
 
 </html>

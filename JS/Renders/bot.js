@@ -279,13 +279,19 @@ const preguntas = [
 let historialPreguntas = [];  
 
 function mostrarSubpreguntas(pregunta, index) {
-    historialPreguntas.push({ pregunta, index });  
+    historialPreguntas.push(pregunta.pregunta);  
     renderizarSubpreguntas(pregunta, index);
+    actualizarDetalleCaso();  // Actualizar el valor del input oculto
 }
 
 function mostrarRespuestas(subpregunta, index, subindex) {
-    historialPreguntas.push({ pregunta: subpregunta, index, subindex });  
+    historialPreguntas.push(subpregunta.pregunta);  
     renderizarRespuestas(subpregunta, index, subindex);
+    actualizarDetalleCaso();  // Actualizar el valor del input oculto
+}
+function actualizarDetalleCaso() {
+    const detalleCasoInput = document.getElementById('detalle_caso');
+    detalleCasoInput.value = historialPreguntas.join(' > ');  // Actualiza el valor con la ruta del chatbot
 }
 
 function renderizarSubpreguntas(pregunta, index) {
@@ -355,6 +361,7 @@ function volverAtras() {
     } else {
         generarPreguntasIniciales();  
     }
+    actualizarDetalleCaso();  // Actualizar el valor del input oculto al volver atrás
 }
 
 function generarPreguntasIniciales() {
