@@ -279,19 +279,21 @@ const preguntas = [
 let historialPreguntas = [];  
 
 function mostrarSubpreguntas(pregunta, index) {
-    historialPreguntas.push(pregunta.pregunta);  
+    historialPreguntas.push({ pregunta: pregunta.pregunta, index, subindex: null });  
     renderizarSubpreguntas(pregunta, index);
     actualizarDetalleCaso();  // Actualizar el valor del input oculto
 }
 
 function mostrarRespuestas(subpregunta, index, subindex) {
-    historialPreguntas.push(subpregunta.pregunta);  
+    historialPreguntas.push({ pregunta: subpregunta.pregunta, index, subindex });  
     renderizarRespuestas(subpregunta, index, subindex);
     actualizarDetalleCaso();  // Actualizar el valor del input oculto
 }
+
 function actualizarDetalleCaso() {
     const detalleCasoInput = document.getElementById('detalle_caso');
-    detalleCasoInput.value = historialPreguntas.join(' > ');  // Actualiza el valor con la ruta del chatbot
+    const ruta = historialPreguntas.map(item => item.pregunta).join(' > ');
+    detalleCasoInput.value = ruta;  // Actualiza el valor con la ruta del chatbot
 }
 
 function renderizarSubpreguntas(pregunta, index) {
@@ -339,7 +341,7 @@ function renderizarRespuestas(subpregunta, index, subindex) {
 
 function agregarBotonVolver() {
     const chatbotContainer = document.getElementById('chatbot-container');
-    if (historialPreguntas.length > 0) {
+    if (historialPreguntas.length > 1) {  // Mostrar el botón solo si hay historial
         const backButton = document.createElement('div');
         backButton.classList.add('message', 'bot-message', 'option');
         backButton.textContent = "Volver atrás";
@@ -353,10 +355,12 @@ function volverAtras() {
     const ultimaPregunta = historialPreguntas[historialPreguntas.length - 1]; 
 
     if (ultimaPregunta) {
-        if (ultimaPregunta.subindex !== undefined) {
-            renderizarRespuestas(ultimaPregunta.pregunta, ultimaPregunta.index, ultimaPregunta.subindex);
+        const pregunta = preguntas[ultimaPregunta.index];
+        if (ultimaPregunta.subindex !== null) {
+            const subpregunta = pregunta.subpreguntas[ultimaPregunta.subindex];
+            renderizarRespuestas(subpregunta, ultimaPregunta.index, ultimaPregunta.subindex);
         } else {
-            renderizarSubpreguntas(ultimaPregunta.pregunta, ultimaPregunta.index);
+            renderizarSubpreguntas(pregunta, ultimaPregunta.index);
         }
     } else {
         generarPreguntasIniciales();  
