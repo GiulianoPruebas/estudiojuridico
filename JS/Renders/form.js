@@ -1,11 +1,24 @@
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Detener el envío automático del formulario
+import { historialPreguntas } from './Historial.js';
+document.addEventListener('DOMContentLoaded', () => {
+    function actualizarCampoCaso() {
+        const casoInput = document.querySelector('input[name="CASO"]');
+        if (historialPreguntas && historialPreguntas.length > 0) {
+            const casoValue = historialPreguntas.map(hp => hp.pregunta.pregunta).join(' - ');
+            casoInput.value = casoValue;
+            console.log('CASO');
+        } else {
+            console.log('No hay historial de preguntas para actualizar el campo CASO.');
+        }
+    }
+    actualizarCampoCaso();
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.style.display = 'flex';  // Mostrar la pantalla de carga
-
-    // Simular un retraso de 2 segundos antes de enviar el formulario
-    setTimeout(() => {
-        event.target.submit();  // Enviar el formulario
-    }, 2000);  // Puedes ajustar el tiempo según prefieras
+        actualizarCampoCaso();
+        const loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.style.display = 'flex';  
+        setTimeout(() => {
+            event.target.submit();  
+        }, 200); 
+    });
 });

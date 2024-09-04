@@ -1,3 +1,4 @@
+import { historialPreguntas } from './Historial.js';
 const preguntas = [
     {
         pregunta: "¿Sufriste un accidente?",
@@ -276,24 +277,25 @@ const preguntas = [
         ]
     }
 ];
-let historialPreguntas = [];  
+function guardarHistorialEnLocalStorage() {
+    localStorage.setItem('historialPreguntas', JSON.stringify(historialPreguntas));
+}
+
+function cargarHistorialDesdeLocalStorage() {
+    const datosGuardados = localStorage.getItem('historialPreguntas');
+    return datosGuardados ? JSON.parse(datosGuardados) : [];
+}
 
 function mostrarSubpreguntas(pregunta, index) {
-    historialPreguntas.push({ pregunta: pregunta.pregunta, index, subindex: null });  
+    historialPreguntas.push({ pregunta, index });
+    guardarHistorialEnLocalStorage();  
     renderizarSubpreguntas(pregunta, index);
-    actualizarDetalleCaso();  // Actualizar el valor del input oculto
 }
 
 function mostrarRespuestas(subpregunta, index, subindex) {
-    historialPreguntas.push({ pregunta: subpregunta.pregunta, index, subindex });  
+    historialPreguntas.push({ pregunta: subpregunta, index, subindex });
+    guardarHistorialEnLocalStorage();  
     renderizarRespuestas(subpregunta, index, subindex);
-    actualizarDetalleCaso();  // Actualizar el valor del input oculto
-}
-
-function actualizarDetalleCaso() {
-    const detalleCasoInput = document.getElementById('detalle_caso');
-    const ruta = historialPreguntas.map(item => item.pregunta).join(' > ');
-    detalleCasoInput.value = ruta;  // Actualiza el valor con la ruta del chatbot
 }
 
 function renderizarSubpreguntas(pregunta, index) {
@@ -341,7 +343,7 @@ function renderizarRespuestas(subpregunta, index, subindex) {
 
 function agregarBotonVolver() {
     const chatbotContainer = document.getElementById('chatbot-container');
-    if (historialPreguntas.length > 1) {  // Mostrar el botón solo si hay historial
+    if (historialPreguntas.length > 0) {
         const backButton = document.createElement('div');
         backButton.classList.add('message', 'bot-message', 'option');
         backButton.textContent = "Volver atrás";
@@ -355,21 +357,20 @@ function volverAtras() {
     const ultimaPregunta = historialPreguntas[historialPreguntas.length - 1]; 
 
     if (ultimaPregunta) {
-        const pregunta = preguntas[ultimaPregunta.index];
-        if (ultimaPregunta.subindex !== null) {
-            const subpregunta = pregunta.subpreguntas[ultimaPregunta.subindex];
-            renderizarRespuestas(subpregunta, ultimaPregunta.index, ultimaPregunta.subindex);
+        if (ultimaPregunta.subindex !== undefined) {
+            renderizarRespuestas(ultimaPregunta.pregunta, ultimaPregunta.index, ultimaPregunta.subindex);
         } else {
-            renderizarSubpreguntas(pregunta, ultimaPregunta.index);
+            renderizarSubpreguntas(ultimaPregunta.pregunta, ultimaPregunta.index);
         }
     } else {
         generarPreguntasIniciales();  
     }
-    actualizarDetalleCaso();  // Actualizar el valor del input oculto al volver atrás
 }
 
 function generarPreguntasIniciales() {
-    historialPreguntas = []; 
+    let historialTemporal = [];
+    historialTemporal = [...historialPreguntas];
+    historialPreguntas.length = 0;
     const chatbotContainer = document.getElementById('chatbot-container');
     chatbotContainer.innerHTML = ''; 
 
@@ -384,10 +385,12 @@ function generarPreguntasIniciales() {
 }
 
 generarPreguntasIniciales();
+
 const modal = document.getElementById("chatbotModal");
 const btn = document.getElementById("openChatbot");
 const span = document.getElementById("closeChatbot");
 const robotImage = document.getElementById("robotImage");
+
 function switchToRobotImage() {
     robotImage.style.display = "block";
 }
@@ -416,6 +419,7 @@ window.onclick = function(event) {
         }, 300); 
     }
 }
+
 setTimeout(() => {
     switchToRobotImage(); 
 }, 4000);
