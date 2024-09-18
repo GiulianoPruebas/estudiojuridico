@@ -7,22 +7,16 @@ function renderFooter() {
         <div class="fbox">
             <h3>General</h3><br>
             <ul>
-                <li><a href="#">Acerca de</a><br></li>
+                <li><a href="Nosotros.html">Acerca de</a><br></li>
                 <li><a href="#">Preguntas frecuentes</a><br></li>
             </ul>
         </div>
         <div class="fbox">
             <h3>Navegar en GYC</h3><br>
             <ul>
-                <li><a href="#">Servicios</a><br></li>
-                <li><a href="#">Inicio</a><br></li>
+                <li><a href="index.html#hacemos">Servicios</a><br></li>
+                <li><a href="index.html">Inicio</a><br></li>
             </ul>
-        </div>
-        <div class="fbox">
-            <h3>Ayuda y Contacto</h3><br>
-            <ul>
-                <li><a href="#" target="_blank">Contactanos</a><br></li>
-            </ul>                
         </div>
     `;
     const footerCredit = document.createElement('div');

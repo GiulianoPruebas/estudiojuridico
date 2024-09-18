@@ -249,7 +249,7 @@ body {
         margin: 0;        
     }
     .info-section {
-        flex: 1 1 calc(50% - 20px); /* Dos elementos por fila en pantallas de hasta 768px */
+        flex: 1 1 calc(50% - 20px); 
     }
     
 }

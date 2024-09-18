@@ -10,7 +10,7 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-header {
+header { 
   width: 100%;
   background: var(--bord);
   position: fixed; 
@@ -19,17 +19,20 @@ header {
   z-index: 1000; 
   box-shadow: 0 14px 15px rgba(0, 0, 0, 0.2);
 }
+.header-expanded {
+  height: 45%; 
+}
 .contenedor,
 .quienes-somos {
   margin-top: 80px; 
 }
-/*.texto {
-  color: var(white);
+.texto {
+  color: white;
   text-decoration: none;
   display: flex;
   align-items: center;
 }
-*/
+
 .logo {
   height: 55px;
   margin-left: 15px;
@@ -52,9 +55,9 @@ header {
   clear: both;
 }
 
-/*.navegacion {
+.navegacion {
   box-shadow: 0 0 1rem var(--bluerf);
-}*/
+}
 .navegacion ul li a{
   color: #ffffff;
 }
@@ -71,11 +74,10 @@ header {
 .menu>li>a {
   display: block;
   padding: 20px 20px;
-  color: #ffffff;;
+  color: #ffffff;
   font-size: 23px;
   text-decoration: none;
 }
-
 .menu-opciones a i {
   margin-right: 8px;
 }
@@ -87,8 +89,19 @@ header {
 header, .navegacion {
   overflow: hidden; 
 }
+
 .menu-toggle {
   display: none;
+}
+.menu-toggle label {
+  font-size: 30px; 
+  color: #ffffff; 
+  cursor: pointer; 
+  display: inline-block;
+  transition: color 0.3s ease; 
+}
+.menu-toggle label:hover {
+  color: #f0f0f0; 
 }
 
 .menu-dropdown {
@@ -98,22 +111,27 @@ header, .navegacion {
   width: 100%;
   text-align: center;
   top: 60px;
+  
 }
 
 .menu-dropdown li {
-  margin-bottom: 10px;
+  padding: 5px; 
+  text-align: left; 
 }
-
 .menu-dropdown li a {
   display: block;
-  padding: 10px;
+  padding: 10px 0; 
   text-decoration: none;
-  color: #0342b3;
   font-size: 18px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 @media (max-width:768px) {
   .navegacion{
     height: 60px;
+  }
+  .contenedor,
+  .quienes-somos {
+  margin-top: 50px; 
   }
   .navegacion ul {
     display: none;    
