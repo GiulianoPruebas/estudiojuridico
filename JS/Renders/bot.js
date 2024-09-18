@@ -292,6 +292,7 @@ function cargarHistorialDesdeLocalStorage() {
     return datosGuardados ? JSON.parse(datosGuardados) : [];
 }
 
+
 function mostrarSubpreguntas(pregunta, index) {
     historialPreguntas.push({ pregunta, index });
     guardarHistorialEnLocalStorage();  
@@ -329,6 +330,7 @@ function renderizarRespuestas(subpregunta, index, subindex) {
     userMessageDiv.classList.add('message', 'user-message');
     userMessageDiv.textContent = subpregunta.pregunta; 
     chatbotContainer.appendChild(userMessageDiv);
+
     if (subpregunta.subpreguntas && subpregunta.subpreguntas.length > 0) {
         subpregunta.subpreguntas.forEach((respuesta) => {
             const respuestaDiv = document.createElement('div');
@@ -340,11 +342,18 @@ function renderizarRespuestas(subpregunta, index, subindex) {
     } else {
         const noRespuestaDiv = document.createElement('div');
         noRespuestaDiv.classList.add('message', 'bot-message', 'respuesta');
-        noRespuestaDiv.innerHTML = 'Complete el siguiente formulario y nos contactaremos a la brevedad.<br><a href="formulario.html" target="_blank" class="form-a">Click aquí</a>';
+        const recorrido = generarTextoRecorrido();  // Generar el recorrido del bot
+        const mensajeInicial = "Hola, este es mi caso: ";
+        noRespuestaDiv.innerHTML = `<br><a href="https://api.whatsapp.com/send/?phone=5491141462757&text=${encodeURIComponent(mensajeInicial + recorrido)}&type=phone_number&app_absent=0" target="_blank" class="form-a">Enviar whatsapp</a>`;
         chatbotContainer.appendChild(noRespuestaDiv);
     }
 
     agregarBotonVolver();
+}
+
+// Función para generar el texto del recorrido
+function generarTextoRecorrido() {
+    return historialPreguntas.map(item => item.pregunta.pregunta).join(' -> ');
 }
 
 function agregarBotonVolver() {
