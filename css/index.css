@@ -1,6 +1,7 @@
 :root {
     --bei: #e8dfd8;
     --bluer: #0342b3;
+    --bord: #900C3F;
 }
 html, body {
     overflow-x: hidden;
@@ -9,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bei);
+    background-color: var(--bord);
     overflow-x: hidden;
 }
 
@@ -18,11 +19,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background-image: url(/4.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
 }
 
 .info {
     text-align: left;
     margin: 0 100px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .info h1 {
@@ -33,6 +40,7 @@ body {
 .info p {
     margin-top: 10px;
     font-size: 2em;
+    
 }
 
 .mas-info {
@@ -40,11 +48,12 @@ body {
 }
 
 .mas-info a {
-    border: 1px solid var(--bluer);
+    border: 1px solid #ffffff; 
+    background-color: var(--bord); 
     font-size: 2em;
     padding: 5px 10px;
     text-decoration: none;
-    color: #000;
+    color: rgb(255, 255, 255);
 }
 
 .mas-info a:hover {
@@ -53,7 +62,7 @@ body {
 }
 
 .quienes-somos {
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
@@ -70,24 +79,27 @@ body {
 
 .quienes-somos h1 {
     font-size: 4em;
+    text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.7);
 }
 
 .quienes-somos p {
     margin: 20px 0;
     font-size: 1.5em;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .quienes-somos span {
-    color: var(--bluer);
+    color: yellow;
 }
 
 .leer-mas {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-    color: white;
-    background-color: #0342b3;
-    border: 1px solid #0342b3;
+    color: #000;
+    background-color: yellow;
+    border: 1px solid #000;
     border-radius: 15px;
     text-align: center;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
@@ -103,10 +115,11 @@ body {
     text-align: center;
     font-size: 2em;
     padding: 50px;
+    text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.7);
 }
 
 .info-hacemos span {
-    color: var(--bluer);
+    color: yellow; 
 }
 
 .info-adicional {
@@ -187,15 +200,6 @@ body {
     padding: 20px;
 }
 
-.info-imagen1 {
-    margin-right: 30px;
-}
-
-.info-imagen1 img {
-    width: 800px;
-    height: auto;
-}
-
 .info-texto {
     flex: 1;
 }
@@ -203,7 +207,8 @@ body {
 .info-texto p {
     margin: 10px 0;
     font-size: 1.5em;
-    color: #424242;
+    color: #ffffff;
+    text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.7);
     text-align: justify;
 }
 
@@ -213,6 +218,8 @@ body {
 
 .info-texto h4 {
     font-size: 2em;
+    color: yellow;
+    text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.7);
 }
 
 .info-texto img {

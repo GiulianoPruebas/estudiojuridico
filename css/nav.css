@@ -1,8 +1,5 @@
 :root {
-  --bei: #e8dfd8;
-  --beiblack: #c4b7ae;
-  --bluer: #0342b3;
-  --bluerf: #bb9071;
+  --bord: #900C3F;
 }
 
 * {
@@ -13,19 +10,26 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
 header {
   width: 100%;
-  background: var(--beiblack);
+  background: var(--bord);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+  box-shadow: 0 14px 15px rgba(0, 0, 0, 0.2);
 }
-
-.texto {
-  color: var(--bluer);
+.contenedor,
+.quienes-somos {
+  margin-top: 80px; 
+}
+/*.texto {
+  color: var(white);
   text-decoration: none;
   display: flex;
   align-items: center;
 }
-
+*/
 .logo {
   height: 55px;
   margin-left: 15px;
@@ -48,8 +52,11 @@ header {
   clear: both;
 }
 
-.navegacion {
+/*.navegacion {
   box-shadow: 0 0 1rem var(--bluerf);
+}*/
+.navegacion ul li a{
+  color: #ffffff;
 }
 
 .navegacion ul {
@@ -64,7 +71,7 @@ header {
 .menu>li>a {
   display: block;
   padding: 20px 20px;
-  color: var(--bluer);
+  color: #ffffff;;
   font-size: 23px;
   text-decoration: none;
 }
@@ -74,7 +81,7 @@ header {
 }
 
 .menu-opciones:hover {
-  background-color: rgba(138, 138, 138, 0.44);
+  background-color: rgba(255, 255, 255, 0.2);
   transition: all .3s;
 }
 header, .navegacion {

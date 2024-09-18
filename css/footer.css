@@ -1,10 +1,13 @@
 :root {
     --bei: #e8dfd8;
-    --beiblack: #c4b7ae;
     --bluer: #0342b3;
+    --bord: #900C3F;
+}
+.footer {
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
 .footer .fbox-container{
-    background: var(--beiblack);
+    background: var(--bord);
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -17,7 +20,7 @@
 }
 .footer .fbox-container .fbox h3{
     display: inline;
-    color: #333131;
+    color: white;
     font-size: 1.5rem;
     padding: 1rem 
 }
@@ -27,14 +30,13 @@
 }
 .footer .fbox-container .fbox a{
     display: inline;
-    color: #333131;
+    color: white;
     font-size: 1rem;
     text-decoration: none;
 }
 
 .footer .fbox-container .fbox a:hover {
-    color: var(--bluer);
-    text-decoration: underline;
+    color: yellow;
 }
 .footer .credit{
     background: var(--beiblack);

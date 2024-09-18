@@ -277,6 +277,12 @@ const preguntas = [
         ]
     }
 ];
+const chatbotImage = document.getElementById("chatbotImage");
+chatbotImage.onclick = function() {
+    modal.style.right = "90px"; 
+    modal.style.display = "block"; 
+    switchToRobotImage(); 
+}
 function guardarHistorialEnLocalStorage() {
     localStorage.setItem('historialPreguntas', JSON.stringify(historialPreguntas));
 }
