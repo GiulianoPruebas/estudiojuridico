@@ -350,8 +350,6 @@ function renderizarRespuestas(subpregunta, index, subindex) {
 
     agregarBotonVolver();
 }
-
-// Función para generar el texto del recorrido
 function generarTextoRecorrido() {
     return historialPreguntas.map(item => item.pregunta.pregunta).join(' -> ');
 }
