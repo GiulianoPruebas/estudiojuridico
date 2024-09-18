@@ -19,10 +19,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-image: url(/4.jpg);
+    background-image: url('../images/4.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
+    
 }
 
 .info {
