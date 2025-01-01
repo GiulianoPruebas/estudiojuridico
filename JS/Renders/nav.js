@@ -23,11 +23,10 @@ function GenerarNav() {
             <input type="checkbox" id="toggle">
             <label for="toggle">&#9776;</label>
             <ul class="menu-dropdown">
+                <li><a href="index.html">INICIO</a></li>
                 <li><a href="Nosotros.html">QUIENES SOMOS</a></li>
-                <li><a href="Accidentes.html">Areas de incumbencia</a></li>
-                <li class="left-links menu-opciones">                
-                <a href="#" id="chatcontac">Contacto</a>                 
-                </li>
+                <li><a href="AreasDI.html">AREAS DE INCUMBENCIA</a></li>
+                <li><a href="#" id="contactoDropdown">CONTACTO</a></li>
             </ul>
         </div>
     `;

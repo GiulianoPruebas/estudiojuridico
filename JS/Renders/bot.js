@@ -198,7 +198,7 @@ const preguntas = [
                             {
                                 pregunta: "¿Te noficiaron del inicio del SA?"
                             }, {
-        
+
                                 pregunta: "¿Declaraste en el SA?"
                             },
                             {
@@ -212,7 +212,7 @@ const preguntas = [
                             {
                                 pregunta: "¿Te noficiaron del inicio del SA?"
                             }, {
-        
+
                                 pregunta: "¿Declaraste en el SA?"
                             },
                             {
@@ -234,7 +234,7 @@ const preguntas = [
                                     {
                                         pregunta: "¿Te noficiaron del inicio del SA?"
                                     }, {
-                
+
                                         pregunta: "¿Declaraste en el SA?"
                                     },
                                     {
@@ -248,7 +248,7 @@ const preguntas = [
                                     {
                                         pregunta: "¿Te noficiaron del inicio del SA?"
                                     }, {
-                
+
                                         pregunta: "¿Declaraste en el SA?"
                                     },
                                     {
@@ -281,18 +281,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatbotImage = document.getElementById("chatbotImage");
     if (chatbotImage) {
         chatbotImage.onclick = function () {
-            modal.style.right = "90px"; 
-            modal.style.display = "block"; 
-            switchToRobotImage(); 
+            modal.style.right = "90px";
+            modal.style.display = "block";
+            switchToRobotImage();
         };
     }
 
     const chatbotContac = document.getElementById("chatcontac");
     if (chatbotContac) {
         chatbotContac.onclick = function () {
-            modal.style.right = "90px"; 
-            modal.style.display = "block"; 
-            switchToRobotImage(); 
+            modal.style.right = "90px";
+            modal.style.display = "block";
+            switchToRobotImage();
+        };
+    }
+    const contactoDropdown = document.getElementById("contactoDropdown");
+    if (contactoDropdown) {
+        contactoDropdown.onclick = function () {
+            modal.style.right = "90px";
+            modal.style.display = "block";
+            switchToRobotImage();
         };
     }
 });
@@ -308,19 +316,19 @@ function cargarHistorialDesdeLocalStorage() {
 
 function mostrarSubpreguntas(pregunta, index) {
     historialPreguntas.push({ pregunta, index });
-    guardarHistorialEnLocalStorage();  
+    guardarHistorialEnLocalStorage();
     renderizarSubpreguntas(pregunta, index);
 }
 
 function mostrarRespuestas(subpregunta, index, subindex) {
     historialPreguntas.push({ pregunta: subpregunta, index, subindex });
-    guardarHistorialEnLocalStorage();  
+    guardarHistorialEnLocalStorage();
     renderizarRespuestas(subpregunta, index, subindex);
 }
 
 function renderizarSubpreguntas(pregunta, index) {
     const chatbotContainer = document.getElementById('chatbot-container');
-    chatbotContainer.innerHTML = ''; 
+    chatbotContainer.innerHTML = '';
     const userMessageDiv = document.createElement('div');
     userMessageDiv.classList.add('message', 'user-message');
     userMessageDiv.textContent = pregunta.pregunta;
@@ -328,7 +336,7 @@ function renderizarSubpreguntas(pregunta, index) {
     pregunta.subpreguntas.forEach((subpregunta, subindex) => {
         const subpreguntaDiv = document.createElement('div');
         subpreguntaDiv.classList.add('message', 'bot-message', 'subpregunta');
-        subpreguntaDiv.textContent = subpregunta.pregunta; 
+        subpreguntaDiv.textContent = subpregunta.pregunta;
         subpreguntaDiv.onclick = () => mostrarRespuestas(subpregunta, index, subindex);
         chatbotContainer.appendChild(subpreguntaDiv);
     });
@@ -338,17 +346,17 @@ function renderizarSubpreguntas(pregunta, index) {
 
 function renderizarRespuestas(subpregunta, index, subindex) {
     const chatbotContainer = document.getElementById('chatbot-container');
-    chatbotContainer.innerHTML = ''; 
+    chatbotContainer.innerHTML = '';
     const userMessageDiv = document.createElement('div');
     userMessageDiv.classList.add('message', 'user-message');
-    userMessageDiv.textContent = subpregunta.pregunta; 
+    userMessageDiv.textContent = subpregunta.pregunta;
     chatbotContainer.appendChild(userMessageDiv);
 
     if (subpregunta.subpreguntas && subpregunta.subpreguntas.length > 0) {
         subpregunta.subpreguntas.forEach((respuesta) => {
             const respuestaDiv = document.createElement('div');
             respuestaDiv.classList.add('message', 'bot-message', 'respuesta');
-            respuestaDiv.textContent = respuesta.pregunta; 
+            respuestaDiv.textContent = respuesta.pregunta;
             respuestaDiv.onclick = () => mostrarRespuestas(respuesta, index, subindex);
             chatbotContainer.appendChild(respuestaDiv);
         });
@@ -379,8 +387,8 @@ function agregarBotonVolver() {
 }
 
 function volverAtras() {
-    historialPreguntas.pop(); 
-    const ultimaPregunta = historialPreguntas[historialPreguntas.length - 1]; 
+    historialPreguntas.pop();
+    const ultimaPregunta = historialPreguntas[historialPreguntas.length - 1];
 
     if (ultimaPregunta) {
         if (ultimaPregunta.subindex !== undefined) {
@@ -389,7 +397,7 @@ function volverAtras() {
             renderizarSubpreguntas(ultimaPregunta.pregunta, ultimaPregunta.index);
         }
     } else {
-        generarPreguntasIniciales();  
+        generarPreguntasIniciales();
     }
 }
 
@@ -398,7 +406,7 @@ function generarPreguntasIniciales() {
     historialTemporal = [...historialPreguntas];
     historialPreguntas.length = 0;
     const chatbotContainer = document.getElementById('chatbot-container');
-    chatbotContainer.innerHTML = ''; 
+    chatbotContainer.innerHTML = '';
 
     preguntas.forEach((pregunta, index) => {
         const preguntaDiv = document.createElement('div');
@@ -421,31 +429,31 @@ function switchToRobotImage() {
     robotImage.style.display = "block";
 }
 
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.right = "90px";
     modal.style.display = "block";
     switchToRobotImage();
 }
 
-span.onclick = function() {
-    modal.style.right = "-320px"; 
+span.onclick = function () {
+    modal.style.right = "-320px";
     setTimeout(() => {
         generarPreguntasIniciales();
         modal.style.display = "none";
         switchToRobotImage();
-    }, 300); 
+    }, 300);
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
-        modal.style.right = "-320px"; 
+        modal.style.right = "-320px";
         setTimeout(() => {
             modal.style.display = "none";
             switchToRobotImage();
-        }, 300); 
+        }, 300);
     }
 }
 
 setTimeout(() => {
-    switchToRobotImage(); 
+    switchToRobotImage();
 }, 4000);
