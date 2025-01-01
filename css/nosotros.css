@@ -24,3 +24,10 @@
 .quienes-somos p:last-of-type {
     margin-bottom: 0;
 }
+#txt-ADI{
+    font-size: 63px;
+}
+.color{
+    color: rgba(0, 0, 255, 0.459);
+    font-weight: bold;
+}

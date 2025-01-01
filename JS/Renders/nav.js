@@ -10,31 +10,24 @@ function GenerarNav() {
                 <a href="Nosotros.html">Quienes Somos</a> 
             </li>
             <li class="left-links menu-opciones">                
-                <a href="Accidentes.html">Accidentes de trabajo</a>                
+                <a href="AreasDI.html">Areas de incumbencia</a>                
+            </li>
+              <li class="left-links menu-opciones">                
+                <a href="Mensaje.html">Mensaje Destacado</a>                
             </li>
             <li class="left-links menu-opciones">                
-                <a href="Retiros.html">Retiros Obligatorios</a>                
+                <a href="#" id="chatcontac">Contacto</a>                 
             </li>
-            <li class="left-links menu-opciones">                
-                <a href="Sumarios.html">Sumarios Disciplinarios</a>                
-            </li>
-            <li class="left-links menu-opciones">                
-                <a href="Junta.html">Junta Medica/Calificaciones</a>                
-            </li>
-            <li class="left-links menu-opciones">                
-                <a href="Reclamos.html">Reclamos Administrativo</a>                
-            </li>       
         </ul>
         <div class="menu-toggle">
             <input type="checkbox" id="toggle">
             <label for="toggle">&#9776;</label>
             <ul class="menu-dropdown">
                 <li><a href="Nosotros.html">QUIENES SOMOS</a></li>
-                <li><a href="Accidentes.html">ACCIDENTES DE TRABAJO</a></li>
-                <li><a href="Retiros.html">RETIROS OBLIGATORIOS</a></li>
-                <li><a href="Sumarios.html">SUMARIOS DISCIPLINARIOS</a></li>
-                <li><a href="Junta.html">JUNTA MEDICA/CALIFICACIONES</a></li>
-                <li><a href="Reclamos.html">RECLAMOS ADMINISTRATIVOS</a></li>
+                <li><a href="Accidentes.html">Areas de incumbencia</a></li>
+                <li class="left-links menu-opciones">                
+                <a href="#" id="chatcontac">Contacto</a>                 
+                </li>
             </ul>
         </div>
     `;
@@ -54,4 +47,7 @@ document.getElementById('toggle').addEventListener('change', function () {
         menuDropdown.style.display = 'none';
         header.classList.remove('header-expanded'); 
     }
+});
+document.getElementById('chatcontac').addEventListener('click', function(event) {
+    event.preventDefault(); 
 });
