@@ -111,7 +111,25 @@ body {
     border-color: #2173ca;
     color: white;
 }
-
+.center-adi{
+    text-align: center;
+}
+#leer-masADI{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    background-color: yellow;
+    border: 1px solid #000;
+    border-radius: 15px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+#leer-masADI:hover {
+    background-color: #2173ca;
+    border-color: #2173ca;
+    color: white;
+}
 .info-hacemos {
     text-align: center;
     font-size: 2em;
@@ -253,7 +271,13 @@ body {
     max-width: 500px;
     width: 100%;
 }
-
+.adi{
+    text-decoration: none;
+}
+#adi{
+    text-decoration: none;
+    color: black;
+}
 #close-popup {
     margin-top: 20px;
     padding: 10px 20px;
