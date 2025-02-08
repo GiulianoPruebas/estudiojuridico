@@ -1,8 +1,8 @@
 :root {
-  --bord: #900C3F;
+  --bord: #a0a0a0;
 }
 
-* {
+* { 
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;

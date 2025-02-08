@@ -80,6 +80,7 @@ body {
 
 .quienes-somos h1 {
     font-size: 4em;
+    color: rgb(39, 36, 54);
     text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.7);
 }
 
@@ -91,15 +92,15 @@ body {
 }
 
 .quienes-somos span {
-    color: yellow;
+    color: rgb(39, 36, 54);
 }
 
 .leer-mas {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-    color: #000;
-    background-color: yellow;
+    color: #fff;
+    background-color: rgb(39, 36, 54);
     border: 1px solid #000;
     border-radius: 15px;
     text-align: center;
@@ -118,8 +119,8 @@ body {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-    color: #000;
-    background-color: yellow;
+    color: #fff;
+    background-color: rgb(39, 36, 54);
     border: 1px solid #000;
     border-radius: 15px;
     text-align: center;
@@ -138,7 +139,7 @@ body {
 }
 
 .info-hacemos span {
-    color: yellow; 
+    color: rgb(39, 36, 54); 
 }
 
 .info-adicional {
@@ -237,7 +238,7 @@ body {
 
 .info-texto h4 {
     font-size: 2em;
-    color: yellow;
+    color: rgb(39, 36, 54);
     text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.7);
 }
 
