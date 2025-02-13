@@ -1,13 +1,13 @@
 :root {
     --bei: #e8dfd8;
     --bluer: #0342b3;
-    --bord: #900C3F;
+    
 }
 .footer {
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
 .footer .fbox-container{
-    background: var(--bord);
+    background: #7a7a77;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -36,7 +36,7 @@
 }
 
 .footer .fbox-container .fbox a:hover {
-    color: yellow;
+    color: rgb(39, 36, 54);
 }
 .footer .credit{
     background: var(--beiblack);

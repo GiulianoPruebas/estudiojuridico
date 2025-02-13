@@ -10,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bord);
+    background-color:#7a7a77;
     overflow-x: hidden;
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 .mas-info a:hover {
-    background-color: var(--bluer);
+    background-color: #efb810;
     color: var(--bei);
 }
 
@@ -80,8 +80,7 @@ body {
 
 .quienes-somos h1 {
     font-size: 4em;
-    color: rgb(39, 36, 54);
-    text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.7);
+    color: #efb810;
 }
 
 .quienes-somos p {
@@ -91,8 +90,19 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-.quienes-somos span {
-    color: rgb(39, 36, 54);
+.quienes-somos span {    
+    font-weight: bold;
+    background: linear-gradient(
+      90deg,
+      #fbe18c,
+      #ffe57f,
+      #ffcc33,
+      #ffe57f,
+      #fbe18c
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;      
 }
 
 .leer-mas {
@@ -108,8 +118,8 @@ body {
 }
 
 .leer-mas:hover {
-    background-color: #2173ca;
-    border-color: #2173ca;
+    background-color: #efb810;
+    border-color: #efb810;
     color: white;
 }
 .center-adi{
@@ -126,9 +136,9 @@ body {
     text-align: center;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
-#leer-masADI:hover {
-    background-color: #2173ca;
-    border-color: #2173ca;
+#leer-masADI:hover {    
+    background-color: #efb810;
+    border-color: #efb810;
     color: white;
 }
 .info-hacemos {
@@ -274,6 +284,7 @@ body {
 }
 .adi{
     text-decoration: none;
+    color: rgb(39, 36, 54);
 }
 #adi{
     text-decoration: none;
@@ -282,7 +293,7 @@ body {
 #close-popup {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #900C3F;
+    background-color: #efb810;
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -290,7 +301,7 @@ body {
 }
 
 #close-popup:hover {
-    background-color: #a63f6f; /* Color más oscuro al pasar el mouse */
+    background-color: #856c23; /* Color más oscuro al pasar el mouse */
 }
 @media (max-width: 1366px) {
     .info-section {

@@ -363,7 +363,7 @@ function renderizarRespuestas(subpregunta, index, subindex) {
     } else {
         const noRespuestaDiv = document.createElement('div');
         noRespuestaDiv.classList.add('message', 'bot-message', 'respuesta');
-        const recorrido = generarTextoRecorrido();  // Generar el recorrido del bot
+        const recorrido = generarTextoRecorrido();  
         const mensajeInicial = "Hola, este es mi caso: ";
         noRespuestaDiv.innerHTML = `<br><a href="https://api.whatsapp.com/send/?phone=5491141462757&text=${encodeURIComponent(mensajeInicial + recorrido)}&type=phone_number&app_absent=0" target="_blank" class="form-a">Enviar whatsapp</a>`;
         chatbotContainer.appendChild(noRespuestaDiv);

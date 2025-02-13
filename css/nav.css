@@ -12,7 +12,7 @@
 }
 header { 
   width: 100%;
-  background: var(--bord);
+  background: #7a7a77;
   position: fixed; 
   top: 0;
   left: 0;
@@ -59,7 +59,18 @@ header {
   box-shadow: 0 0 1rem var(--bluerf);
 }
 .navegacion ul li a{
-  color: #ffffff;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #fbe18c,
+    #ffe57f,
+    #ffcc33,
+    #ffe57f,
+    #fbe18c
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .navegacion ul {
