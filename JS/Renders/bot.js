@@ -88,6 +88,9 @@ const preguntas = [
                         ]
                     }
                 ]
+            },
+            {
+                pregunta: "Ninguna de estas."
             }
         ]
     },
@@ -273,8 +276,14 @@ const preguntas = [
             },
             {
                 pregunta: "No pasaron más de 15 días habiles"
+            },
+            {
+                pregunta: "Ninguna de estas."
             }
         ]
+    },
+    {
+        pregunta: "Ninguna de estas.",
     }
 ];
 document.addEventListener('DOMContentLoaded', () => {
