@@ -151,6 +151,9 @@ const preguntas = [
                                 pregunta: "Ninguna de estas."
                             }
                         ]
+                    },
+                    {
+                        pregunta: "Ninguna de estas."
                     }
                 ]
             },
@@ -167,6 +170,9 @@ const preguntas = [
                         pregunta: "Ninguna de estas."
                     }
                 ]
+            },
+            {
+                pregunta: "Ninguna de estas."
             }
         ]
     },
@@ -206,6 +212,9 @@ const preguntas = [
                         pregunta: "Ninguna de estas."
                     }
                 ]
+            },
+            {
+                pregunta: "Ninguna de estas."
             }
         ]
     },
@@ -421,6 +430,8 @@ function renderizarSubpreguntas(pregunta, index) {
 
     agregarBotonVolver();
 }
+
+
 
 function renderizarRespuestas(subpregunta, index, subindex) {
     const chatbotContainer = document.getElementById('chatbot-container');
