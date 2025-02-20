@@ -17,6 +17,9 @@ const preguntas = [
                                     },
                                     {
                                         pregunta: "No me notificaron de la resolución"
+                                    },
+                                    {
+                                        pregunta: "Ninguna de estas."
                                     }
                                 ]
                             },
@@ -28,8 +31,14 @@ const preguntas = [
                                     },
                                     {
                                         pregunta: "No me notificaron de la resolución"
+                                    },
+                                    {
+                                        pregunta: "Ninguna de estas."
                                     }
                                 ]
+                            },
+                            {
+                                pregunta: "Ninguna de estas."
                             }
                         ]
                     },
@@ -41,8 +50,14 @@ const preguntas = [
                             },
                             {
                                 pregunta: "No pasaron 2 años desde el alta o rechazo"
+                            },
+                            {
+                                pregunta: "Ninguna de estas."
                             }
                         ]
+                    },
+                    {
+                        pregunta: "Ninguna de estas."
                     }
                 ]
             },
@@ -60,6 +75,9 @@ const preguntas = [
                                     },
                                     {
                                         pregunta: "No me notificaron de la resolución"
+                                    },
+                                    {
+                                        pregunta: "Ninguna de estas."
                                     }
                                 ]
                             },
@@ -71,6 +89,9 @@ const preguntas = [
                                     },
                                     {
                                         pregunta: "No me notificaron de la resolución"
+                                    },
+                                    {
+                                        pregunta: "Ninguna de estas."
                                     }
                                 ]
                             }
@@ -84,6 +105,9 @@ const preguntas = [
                             },
                             {
                                 pregunta: "No pasaron 2 años desde el alta o rechazo"
+                            },
+                            {
+                                pregunta: "Ninguna de estas."
                             }
                         ]
                     }
@@ -108,6 +132,9 @@ const preguntas = [
                             },
                             {
                                 pregunta: "No me notificaron de la resolución"
+                            },
+                            {
+                                pregunta: "Ninguna de estas."
                             }
                         ]
                     },
@@ -119,6 +146,9 @@ const preguntas = [
                             },
                             {
                                 pregunta: "No me notificaron de la resolución"
+                            },
+                            {
+                                pregunta: "Ninguna de estas."
                             }
                         ]
                     }
@@ -132,6 +162,9 @@ const preguntas = [
                     },
                     {
                         pregunta: "No pasaron 2 años desde el alta o rechazo"
+                    },
+                    {
+                        pregunta: "Ninguna de estas."
                     }
                 ]
             }
@@ -151,6 +184,9 @@ const preguntas = [
                     },
                     {
                         pregunta: "¿Te Notificaron de una sanción?"
+                    },
+                    {
+                        pregunta: "Ninguna de estas."
                     }
                 ]
             },
@@ -165,6 +201,9 @@ const preguntas = [
                     },
                     {
                         pregunta: "¿Te Notificaron de una sanción?"
+                    },
+                    {
+                        pregunta: "Ninguna de estas."
                     }
                 ]
             }
@@ -184,11 +223,17 @@ const preguntas = [
                             },
                             {
                                 pregunta: "No me notificaron de la resolución"
+                            },
+                            {
+                                pregunta: "Ninguna de estas."
                             }
                         ]
                     },
                     {
                         pregunta: "No iniciaron actuaciones de encuadre"
+                    },
+                    {
+                        pregunta: "Ninguna de estas."
                     }
                 ]
             },
@@ -206,6 +251,9 @@ const preguntas = [
                             },
                             {
                                 pregunta: "¿Te Notificaron de una sanción?"
+                            },
+                            {
+                                pregunta: "Ninguna de estas."
                             }
                         ]
                     },
@@ -220,8 +268,14 @@ const preguntas = [
                             },
                             {
                                 pregunta: "¿Te Notificaron de una sanción?"
+                            },
+                            {
+                                pregunta: "Ninguna de estas."
                             }
                         ]
+                    },
+                    {
+                        pregunta: "Ninguna de estas."
                     }
                 ]
             },
@@ -242,6 +296,9 @@ const preguntas = [
                                     },
                                     {
                                         pregunta: "¿Te Notificaron de una sanción?"
+                                    },
+                                    {
+                                        pregunta: "Ninguna de estas."
                                     }
                                 ]
                             },
@@ -256,15 +313,27 @@ const preguntas = [
                                     },
                                     {
                                         pregunta: "¿Te Notificaron de una sanción?"
+                                    },
+                                    {
+                                        pregunta: "Ninguna de estas."
                                     }
                                 ]
+                            },
+                            {
+                                pregunta: "Ninguna de estas."
                             }
                         ]
                     },
                     {
                         pregunta: "No te notificaron del inicio de SA por este motivo"
+                    },
+                    {
+                        pregunta: "Ninguna de estas."
                     }
                 ]
+            },
+            {
+                pregunta: "Ninguna de estas."
             }
         ]
     },
