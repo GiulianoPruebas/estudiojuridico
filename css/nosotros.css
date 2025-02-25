@@ -1,10 +1,10 @@
 .quienes-somos {
     padding: 40px 20px;
 }
-.quienes-somos .about {
+/*.quienes-somos .about {
     max-width: 800px;
     margin: 0 auto;
-}
+}*/
 .text-quienes {
     font-size: 36px;
     text-align: center;
@@ -24,12 +24,12 @@
 .quienes-somos p:last-of-type {
     margin-bottom: 0;
 }
+.quienes-somos .color{
+    color: rgb(39, 36, 54);
+    font-weight: bold;
+}
 #txt-ADI{
     font-size: 63px;
-}
-.color{
-    color: #efb810;
-    font-weight: bold;
 }
 @media (max-width:768px) {
     #txt-ADI{

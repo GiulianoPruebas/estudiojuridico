@@ -320,7 +320,7 @@ body {
 }
 @media (max-width: 1280px) {
     .info-section {
-        flex: 1 1 calc(20% - 20px); 
+        flex: 1 1 calc(20% - 20px);         
     }
 }
 @media (max-width: 768px) {

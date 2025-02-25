@@ -343,6 +343,7 @@ const preguntas = [
             },
             {
                 pregunta: "Ninguna de estas."
+                
             }
         ]
     },
@@ -361,7 +362,12 @@ const preguntas = [
         ]
     },
     {
-        pregunta: "Ninguna de estas.",
+        pregunta: "Otro caso",
+        subpreguntas: [
+            {
+                pregunta: "Ningun de estas es la correcta a mi caso."
+            }
+        ]
     }
 ];
 document.addEventListener('DOMContentLoaded', () => {
@@ -430,9 +436,6 @@ function renderizarSubpreguntas(pregunta, index) {
 
     agregarBotonVolver();
 }
-
-
-
 function renderizarRespuestas(subpregunta, index, subindex) {
     const chatbotContainer = document.getElementById('chatbot-container');
     chatbotContainer.innerHTML = '';
@@ -454,7 +457,7 @@ function renderizarRespuestas(subpregunta, index, subindex) {
         noRespuestaDiv.classList.add('message', 'bot-message', 'respuesta');
         const recorrido = generarTextoRecorrido();  
         const mensajeInicial = "Hola, este es mi caso: ";
-        noRespuestaDiv.innerHTML = `<br><a href="https://api.whatsapp.com/send/?phone=5491141462757&text=${encodeURIComponent(mensajeInicial + recorrido)}&type=phone_number&app_absent=0" target="_blank" class="form-a">Enviar whatsapp</a>`;
+        noRespuestaDiv.innerHTML = `<br><a href="https://api.whatsapp.com/send/?phone=5491158093376&text=${encodeURIComponent(mensajeInicial + recorrido)}&type=phone_number&app_absent=0" target="_blank" class="form-a">Enviar whatsapp</a>`;
         chatbotContainer.appendChild(noRespuestaDiv);
     }
 

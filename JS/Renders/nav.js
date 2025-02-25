@@ -12,9 +12,6 @@ function GenerarNav() {
             <li class="left-links menu-opciones">                
                 <a href="AreasDI.html">Areas de incumbencia</a>                
             </li>
-              <li class="left-links menu-opciones">                
-                <a href="Mensaje.html">Mensaje Destacado</a>                
-            </li>
             <li class="left-links menu-opciones">                
                 <a href="#" id="chatcontac">Contacto</a>                 
             </li>
