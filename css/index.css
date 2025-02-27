@@ -85,11 +85,13 @@ body {
 .quienes-somos h2 { /* texto "G & C */
     font-size: 6em;
     color: #000000;
+    margin-top: -120px; /* Acerca el texto al logo */
     margin-left: 1ch; /* Desplazar el texto a la derecha */
 }
 .quienes-somos h3 { /* el texto estudio juridico */
-    font-size: 3em;
-    color: #000000;
+    font-size: 2em;
+    color:goldenrod;
+    margin-top: -40px; /* Acerca el texto al logo */
     margin-left: 2ch; /* Desplazar el texto a la derecha */
 }
 .quienes-somos p { 
