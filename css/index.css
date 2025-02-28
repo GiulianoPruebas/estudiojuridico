@@ -28,9 +28,12 @@ body {
 
 .info {
     text-align: left;
-    margin: 0 100px;
+    margin: 900 100px;
     color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
+    text-align: justify;
+    font-family: 'Pacifico', sans-serif; /* Cambia la fuente aquí */
+
 }
 
 .info h1 {
@@ -87,18 +90,27 @@ body {
     color: #000000;
     margin-top: -120px; /* Acerca el texto al logo */
     margin-left: 1ch; /* Desplazar el texto a la derecha */
+    font-family: 'Georgia', sans-serif; /* Cambia la fuente aquí */
+    text-shadow: 9px 9px 9px rgba(80, 92, 2, 0.6); /* Sombra dorada */
+
 }
 .quienes-somos h3 { /* el texto estudio juridico */
     font-size: 2em;
     color:goldenrod;
     margin-top: -40px; /* Acerca el texto al logo */
-    margin-left: 2ch; /* Desplazar el texto a la derecha */
+    margin-left: 3ch; /* Desplazar el texto a la derecha */
+    font-family: 'Lobster', sans-serif; /* Cambia la fuente aquí */
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
 }
+
+
 .quienes-somos p { 
     margin: 20px 0;
-    font-size: 1.5em;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-size: 2.5em;
+    color: rgb(245, 245, 245);
+    text-shadow: 5px 2px 2px rgba(0, 0, 0, 0.7);
+    letter-spacing: 5px; /* Ajusta el valor según lo que necesites */
+    text-align: justify;
 }
 
 

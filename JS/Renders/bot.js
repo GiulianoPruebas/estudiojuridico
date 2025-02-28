@@ -94,6 +94,9 @@ const preguntas = [
                                         pregunta: "Ninguna de estas."
                                     }
                                 ]
+                            },
+                            {
+                                pregunta: "Ninguna de estas."
                             }
                         ]
                     },
@@ -110,6 +113,9 @@ const preguntas = [
                                 pregunta: "Ninguna de estas."
                             }
                         ]
+                    },
+                    {
+                        pregunta: "Ninguna de estas."
                     }
                 ]
             },
