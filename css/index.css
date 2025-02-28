@@ -33,7 +33,6 @@ body {
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
     text-align: justify;
     font-family: 'Pacifico', sans-serif; /* Cambia la fuente aquí */
-
 }
 
 .info h1 {
@@ -85,15 +84,13 @@ body {
     font-size: 4em;
     color: #efb810;   
 }
-.quienes-somos h2 { /* texto "G & C */
-    font-size: 6em;
+#textoGYC { font-size: 6em !important;
     color: #000000;
     margin-top: -120px; /* Acerca el texto al logo */
     margin-left: 1ch; /* Desplazar el texto a la derecha */
     font-family: 'Georgia', sans-serif; /* Cambia la fuente aquí */
-    text-shadow: 9px 9px 9px rgba(80, 92, 2, 0.6); /* Sombra dorada */
+    text-shadow: 9px 9px 9px rgba(80, 92, 2, 0.6); /* Sombra dorada */  }
 
-}
 .quienes-somos h3 { /* el texto estudio juridico */
     font-size: 2em;
     color:goldenrod;
