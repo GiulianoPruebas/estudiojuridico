@@ -134,7 +134,7 @@ const preguntas = [
                         pregunta: "¿Iniciaron actuaciones en dependencia para encuadrar las lesiones en y por acto del servicio?",
                         subpreguntas: [
                             {
-                                pregunta: "¿Te notificaron de la resolución?"
+                                pregunta: "Me notificaron de la resolución"
                             },
                             {
                                 pregunta: "No me notificaron de la resolución"
